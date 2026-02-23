@@ -6,17 +6,17 @@ font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-background:#f4f9ff;
-color:#333;
+background:#f3f9ff;
+color:#1e293b;
 }
 
-/* TOP BAR */
+/* TOPBAR */
 .topbar{
 background:linear-gradient(90deg,#0f766e,#2563eb);
 color:white;
 display:flex;
 justify-content:space-between;
-padding:10px 60px;
+padding:12px 60px;
 font-size:14px;
 }
 
@@ -27,12 +27,10 @@ justify-content:space-between;
 align-items:center;
 padding:20px 60px;
 background:white;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .logo{
-font-size:22px;
-font-weight:bold;
 color:#0f766e;
 }
 
@@ -44,48 +42,42 @@ list-style:none;
 
 .nav a{
 text-decoration:none;
-color:#333;
-}
-
-.btn{
-background:#0f766e;
-color:white;
-padding:8px 18px;
-border-radius:20px;
+color:#1e293b;
+font-weight:500;
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(rgba(15,118,110,0.85),rgba(37,99,235,0.85)),
-url('https://images.unsplash.com/photo-1588776814546-ec7e8b1a11f3');
-background-size:cover;
-background-position:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
 color:white;
 text-align:center;
 padding:120px 20px;
 }
 
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
+.hero span{
+color:#38bdf8;
 }
 
 .hero p{
 max-width:600px;
-margin:auto;
-margin-bottom:30px;
+margin:20px auto;
+opacity:0.9;
 }
 
-.primary{
-background:white;
-color:#0f766e;
+.hero-buttons{
+margin-top:25px;
+}
+
+.btn-primary{
+background:#38bdf8;
+color:white;
 padding:12px 25px;
 border-radius:25px;
 text-decoration:none;
 margin-right:10px;
 }
 
-.secondary{
+.btn-outline{
 border:2px solid white;
 color:white;
 padding:12px 25px;
@@ -95,67 +87,60 @@ text-decoration:none;
 
 /* ABOUT */
 .about{
-padding:80px 60px;
+padding:90px 60px;
 background:white;
 }
 
 .about-container{
 display:flex;
-gap:50px;
+gap:60px;
 align-items:center;
 flex-wrap:wrap;
 }
 
 .doctor-photo img{
-width:250px;
-height:250px;
+width:260px;
+height:260px;
 border-radius:50%;
 object-fit:cover;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
-.doctor-info{
-flex:1;
-}
-
-.doctor-info h2{
+.doctor-content h2{
 color:#0f766e;
 margin-bottom:20px;
 }
 
 /* SERVICES */
 .services{
-background:#eef6ff;
-padding:80px 60px;
+background:#e0f2fe;
+padding:90px 60px;
 text-align:center;
-}
-
-.services h2{
-margin-bottom:40px;
-color:#0f766e;
 }
 
 .service-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
+margin-top:40px;
 }
 
-.card{
+.service-card{
 background:white;
 padding:30px;
 border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.service-card:hover{
+transform:translateY(-6px);
 }
 
 /* REVIEWS */
 .reviews{
-padding:80px 60px;
+padding:90px 60px;
+background:#f8fafc;
 text-align:center;
 }
 
@@ -163,21 +148,21 @@ text-align:center;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-margin-top:30px;
+margin-top:40px;
 }
 
 .review-card{
-background:#f0f9ff;
+background:white;
 padding:30px;
 border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
 /* LOCATION */
 .location{
-background:#0f172a;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
 color:white;
-padding:60px;
+padding:70px 60px;
 }
 
 .location-container{
@@ -190,10 +175,11 @@ gap:40px;
 .map iframe{
 width:350px;
 height:220px;
-border-radius:10px;
+border-radius:12px;
 border:none;
 }
 
+/* FOOTER */
 .footer{
 background:#020617;
 color:white;
@@ -212,4 +198,36 @@ flex-direction:column;
 .map iframe{
 width:100%;
 }
+}
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
+z-index:1000;
+transition:0.3s;
+animation: pulse 2s infinite;
+}
+
+.whatsapp-float img{
+width:35px;
+height:35px;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
